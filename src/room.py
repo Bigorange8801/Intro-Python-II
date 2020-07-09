@@ -1,14 +1,11 @@
 # Implement a class to hold room information. This should have name and
 # description attributes.
 
-class Player :
-    def __init__(self,name,age,char):
-        self.name = name
-        self.age = age
-        self.char = char
+class Room:
 
-p1 = Player("Sonic", 29 , "Hedgehog")
+    def __init__(self, room_name, room_description, room_items = []):
+        self.room_name = room_name
+        self.room_description = room_description
 
-print(p1.name)
-print(p1.age)
-print(p1.char)
+    def __str__(self):
+        return f"{self.room_name}: {self.room_description}"
